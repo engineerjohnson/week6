@@ -1,1 +1,0 @@
-import{_ as e,o as t,c as o,b as a,t as r,d as s}from"./index-169d79b8.js";const c={},n=s("button",{type:"button",class:"btn btn-primary"},"Primary",-1);function _(i,d){return t(),o("div",null,[n,a(" "+r("我是作業6"))])}const m=e(c,[["render",_]]);export{m as default};

@@ -1,0 +1,1 @@
+import{_ as t,o as e,c as a,b as r,t as o,d as s}from"./index-2fc29b7d.js";const c={},n=s("button",{type:"button",class:"btn btn-primary"},"Primary",-1);function _(i,d){return e(),a("div",null,[n,r(" "+o("我是購物車"))])}const p=t(c,[["render",_]]);export{p as default};
