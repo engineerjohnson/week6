@@ -21,10 +21,10 @@ git add -A
 git commit -m 'deploy'
 
 
-# if you are deploying to https://iamamberhh.github.io
-# git push -f git@github.com:iamamberhh/iamamberhh.github.io.git main
+# if you are deploying to https://engineerjohnson.github.io
+# git push -f git@github.com:engineerjohnson/engineerjohnson.github.io.git main
 
-# if you are deploying to https://iamamberhh.github.io/
-git push -f git@github.com:iamamberhh/demo_vite.git main:gh-pages
+# if you are deploying to https://engineerjohnson.github.io/week6
+git push -f https://github.com/engineerjohnson/week6.git main:gh-pages 
 
 cd -
