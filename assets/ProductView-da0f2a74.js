@@ -1,0 +1,1 @@
+import{_ as t,o as e,c as o,b as r,t as a,d as c}from"./index-b685d04a.js";const s={},n=c("button",{type:"button",class:"btn btn-primary"},"Primary",-1);function _(i,d){return e(),o("div",null,[n,r(" "+a("我是單一商品"))])}const p=t(s,[["render",_]]);export{p as default};
