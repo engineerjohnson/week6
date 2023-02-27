@@ -1,7 +1,7 @@
 <script>
 import Loading from "vue-loading-overlay";
+import productModel from "../../components/ProductModel.vue";
 const { VITE_APP_API, VITE_APP_PATH } = import.meta.env;
-import { RouterLink } from "vue-router";
 export default {
   data() {
     return {
@@ -14,8 +14,8 @@ export default {
     };
   },
   components: {
-    RouterLink,
     Loading,
+    productModel,
   },
   //方法
   methods: {
@@ -30,6 +30,9 @@ export default {
         .catch((err) => {
           alert(err.response.data.message);
         });
+    },
+    openModal(id) {
+      this.productId = id;
     },
     addToCart(product_id, qty = 1) {
       //傳入商品ID及數量 數量預設為1
@@ -61,6 +64,11 @@ export default {
 <template>
   <loading v-model:active="isLoading" />
   <div class="container">
+    <product-model
+      :id="productId"
+      :add-to-cart="addToCart"
+      :open-modal="openModal"
+    ></product-model>
     <table class="table align-middle">
       <thead>
         <tr>
@@ -92,10 +100,12 @@ export default {
           </td>
           <td>
             <div class="btn-group btn-group-sm">
-              <button type="button" class="btn btn-outline-secondary">
-                <router-link :to="`/Product/${product.id}`"
-                  ><i class="fa-pulse text-end">查看更多</i></router-link
-                >
+              <button
+                type="button"
+                class="btn btn-outline-secondary"
+                @click="openModal(product.id)"
+              >
+                <i class="fa-pulse text-end">查看更多</i>
               </button>
               <button
                 type="button"
